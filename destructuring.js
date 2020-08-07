@@ -22,7 +22,7 @@ var carDetails = {
 */
 
 //Code Here
-
+const {color, make, model, year} = carDetails;
 
 
 ////////// PROBLEM 2 //////////
@@ -35,7 +35,7 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
-  
+  const {title, firstName, lastName} = obj;
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -54,9 +54,17 @@ function greeting( obj ) {
 */
 
 //Code Here
+let totalPopulation = (obj) => {
+  const{utah, california, texas, arizona} = obj;
+  let totalNumber = utah + california + texas + arizona;
+  return totalNumber;
+}
+
+//let totalPopulation = ({utah, california, texas, arizona}) =>  utah + california + texas + arizona;
+  
 
 
-
+//totalPopulation();
 ////////// PROBLEM 4 //////////
 
 /*
@@ -68,7 +76,13 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+let ingredients = (obj) => {
+  const {carb, fat, protein} = obj;
+  let newArr = [];
+  newArr.push(carb, fat, protein);
+  return newArr;
+}
+console.log(ingredients("bread", "grease", "fish"));
 
 
 ////////// PROBLEM 5 //////////
@@ -86,7 +100,12 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+let largeNumbers = ({first, second, third}) => {
+  let smallNum =[];
+  smallNum.push(first, second, third);
+  smallNum.sort(function(a,b){return a-b});
+  return smallNum[0];
+}
 
 
 ////////// PROBLEM 6 //////////
@@ -98,5 +117,12 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+let numberGroups = ({a, b, c}) => {
+let longLongMan =[];
+longMan.push(a, b, c);
+longMan.sort(function(a,b){return b.length-a.length});
+console.log(longMan);
+console.log(longMan[0])
+return longMan[0];
+}
 
