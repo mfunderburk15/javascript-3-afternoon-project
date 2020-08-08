@@ -38,11 +38,13 @@
 /*
   Inside the function showValues, write a for in loop that concatenates each of the property values and returns the concatenated string.
 */
-
-function showValues( obj ) {
-  //Code Here
+let showValues = (obj) => {
+  let text = '';
+  for(let prop in obj){
+    text += obj[prop];
+  }
+  return text;
 }
-
 
 
 ////////// PROBLEM 2 //////////
@@ -53,8 +55,15 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
-
+//Code here
+let greaterThan10 = (obj) => {
+  for(let prop in obj){
+    if(obj[prop] > 10){
+      obj[prop] = 0;
+    }
+  }
+  return obj;
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -66,7 +75,12 @@ function showValues( obj ) {
 */
 
 //Code Here
-
+let double = (obj) => {
+  for(let prop in obj){
+     obj[prop] *= 2;
+  }
+  return obj;
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -79,9 +93,18 @@ function showValues( obj ) {
   By the end of the for in loop, you should have a sentence, return that sentence.
 */
 
+
 //Code Here
-
-
+let secrets = (obj) => {
+  let text = "";
+  let quiet = "sh";
+  for(let prop in obj){
+    if(prop.indexOf(quiet) === 0){
+      text += obj[prop];
+    }
+  }
+  return text;
+}
 
 /* 
   Sometimes it's needed to delete object properties. 
@@ -111,7 +134,12 @@ function showValues( obj ) {
 */
 
 //Code Here
-
+let removePassword = (obj) => {
+  for(let prop in obj){
+  delete obj["password"];
+  }
+  return obj;
+}
 
 
 ////////// PROBLEM 6 //////////
@@ -130,9 +158,11 @@ var deleteTheBigNumbers = {
 */
 
 //Code Here
-
-
-
+for(let prop in deleteTheBigNumbers){
+  if(deleteTheBigNumbers[prop] > 100){
+    delete deleteTheBigNumbers[prop];
+  }
+}
 ////////// PROBLEM 7 //////////
 
 /*
@@ -143,7 +173,15 @@ var deleteTheBigNumbers = {
 */
 
 //Code Here
-
+let startsWithK = (obj) => {
+  let okay = "k"
+  for(let prop in obj){
+    if(prop.indexOf(okay) === 0){
+      delete obj[prop];
+    }
+  }
+  return obj;
+}
 
 
 ////////// PROBLEM 8 //////////
@@ -158,5 +196,14 @@ var deleteTheBigNumbers = {
 */
 
 //Code Here
-
+let hiddenTreasure = (obj) => {
+  console.log(obj)
+  let loot = "treasure";
+  for(let prop in obj){
+    if(!obj[prop].includes(loot)){
+      delete obj[prop];
+    }
+  }
+  return obj;
+}
 
