@@ -51,6 +51,17 @@ var employees = [
 */
 
 //Code Here
+// let employeeUpdater = () => {
+//   let filteredEmployees = employees.filter(e => e.firstName !== "Theo")
+//   let mappedEmployees = filteredEmployees.map(e => {
+//     if(e.firstName === "Lorie"){
+//     e.department = "HR"
+//   }
+//   return e;
+// })
+// return mappedEmployees;
+// }
+
 let employeeUpdater = () => {
   employees.forEach((element, index)=> {
     if(element["firstName"] === "Theo"){
