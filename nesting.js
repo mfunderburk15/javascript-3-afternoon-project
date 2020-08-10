@@ -51,8 +51,17 @@ var employees = [
 */
 
 //Code Here
-
-
+let employeeUpdater = () => {
+  employees.forEach((element, index)=> {
+    if(element["firstName"] === "Theo"){
+      employees.splice(index,1,)
+    }else if (element["firstName"] === "Lorie"){
+      element["department"] = "HR";
+    }
+  })
+  return employees;
+}
+  
 
 ////////// PROBLEM 2 //////////
 
@@ -69,7 +78,15 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 */
 
 //Code Here
-
+let removeDuplicates = (arr) => {
+  let newArr = [];
+  arr.forEach(element => {
+    if (!newArr.includes(element)){
+      newArr.push(element)
+    }
+  })
+  return newArr;
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -96,10 +113,15 @@ var cat = {
     2. Assign fluffy2ndFriend the name of Fluffy's 2nd friend.
 */
 
-//Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
-
+// var grumpyActivity;
+// var fluffy2ndFriend;
+// cat["catFriends"].forEach((element, index) =>{
+//   console.log(element.activities[1])
+//   if(element.name === "Grumpy"){
+//   element.activities[1] = grumpyActivity;
+//   console.log(element.activities[1])
+//   }
+// })
 
 
 ////////// PROBLEM 4 //////////
@@ -139,7 +161,11 @@ var myCar = {
 */
 
 //Code Here
-
+let recordCleaner = () => {
+  myCar.accidents.forEach((element) =>{
+    element.atFaultForAccident = false;
+  })
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -158,5 +184,16 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 */
 
 //Code Here
-
+let looper = (index, j) => {
+  numsArr[index][j].forEach((element) => {
+    if(element[index][j] % 2 === 0){
+      element[index][j] = "even"
+    }else{
+      element[index][j] = "odd"
+    }
+  })
+  console.log(numsArr)
+  return numsArr;
+  
+}
 
