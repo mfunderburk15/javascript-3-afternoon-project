@@ -113,15 +113,9 @@ var cat = {
     2. Assign fluffy2ndFriend the name of Fluffy's 2nd friend.
 */
 
-// var grumpyActivity;
-// var fluffy2ndFriend;
-// cat["catFriends"].forEach((element, index) =>{
-//   console.log(element.activities[1])
-//   if(element.name === "Grumpy"){
-//   element.activities[1] = grumpyActivity;
-//   console.log(element.activities[1])
-//   }
-// })
+var grumpyActivity = cat.catFriends[0].activities[1];
+console.log(cat.catFriends[0].activities[1])
+var fluffy2ndFriend = cat.catFriends[1].name;
 
 
 ////////// PROBLEM 4 //////////
@@ -184,16 +178,21 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 */
 
 //Code Here
-let looper = (index, j) => {
-  numsArr[index][j].forEach((element) => {
-    if(element[index][j] % 2 === 0){
-      element[index][j] = "even"
-    }else{
-      element[index][j] = "odd"
+let looper = () => {
+  numsArr.forEach((array) => {
+    console.log(array)
+    array.forEach((element, i) =>{
+      console.log(i)
+    if(array[i] % 2 === 0){
+      array[i] = "even"
+    }else if(array[i] % 2 === 1){
+      array[i] = "odd"
     }
+  })
   })
   console.log(numsArr)
   return numsArr;
-  
 }
+
+console.log(looper())
 
