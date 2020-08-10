@@ -88,7 +88,16 @@ let removeDuplicates = () => {
   return workplaceAccidents;
 }
 
-
+//Code Here
+/*let removeDuplicates = (arr) => {
+  let newArr = [];
+  arr.forEach(element => {
+    if (!newArr.includes(element)){
+      newArr.push(element)
+    }
+  })
+  return newArr;
+}*/
 
 
 ////////// PROBLEM 3 //////////
