@@ -77,16 +77,18 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-//Code Here
-let removeDuplicates = (arr) => {
-  let newArr = [];
-  arr.forEach(element => {
-    if (!newArr.includes(element)){
-      newArr.push(element)
+let removeDuplicates = () => {
+  for(let i=0; i< workplaceAccidents.length; i++){
+    for(let j = i + 1; j < workplaceAccidents.length; j++){
+      if(workplaceAccidents[i] === workplaceAccidents[j]){
+        workplaceAccidents.splice(i,1,)
+      }
     }
-  })
-  return newArr;
+  }
+  return workplaceAccidents;
 }
+
+
 
 
 ////////// PROBLEM 3 //////////
@@ -114,7 +116,6 @@ var cat = {
 */
 
 var grumpyActivity = cat.catFriends[0].activities[1];
-console.log(cat.catFriends[0].activities[1])
 var fluffy2ndFriend = cat.catFriends[1].name;
 
 
