@@ -118,7 +118,7 @@ let largeNumbers = ({first, second, third}) => {
 
 //Code Here
 let numberGroups = ({a, b, c}) => {
-let longLongMan =[];
+let longMan =[];
 longMan.push(a, b, c);
 longMan.sort(function(a,b){return b.length-a.length});
 console.log(longMan);
